@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Manasik Haji Lengkap</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1591604129939-f1efa4d8f7ec?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 70px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-weight: 700;
+            margin-top: 50px;
+            margin-bottom: 5px;
+            font-size: 1.8rem;
+        }
+
+        .section-subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .haji-card {
+            background: white;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .haji-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-img-container {
+            position: relative;
+            height: 200px;
+        }
+
+        .card-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .badge-overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #5d824a;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h5 {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .card-content p {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .larangan-box {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-left: 6px solid #5d824a;
+        }
+
+        footer {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            margin-top: 50px;
+        }
+
+        .dalil-box {
+            background: #e8f5e9;
+            border-left: 5px solid #2e7d32;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-section">
+        <div class="container">
+            <span class="badge bg-success mb-2">Al-Qur'an & Sunnah</span>
+            <h1>E-Learning Manasik Haji Lengkap</h1>
+            <p>Panduan Lengkap Tata Cara Haji Sesuai Tuntunan Syariat</p>
+        </div>
+    </header>
+
+    <div class="container mb-5">
+        
+        <h2 class="section-title">I. Syarat Wajib Haji</h2>
+        <p class="section-subtitle">Kriteria yang harus dipenuhi sebelum ibadah haji menjadi wajib bagi seseorang.</p>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="haji-card" onclick="openDetail('islam')">
+                    <div class="card-img-container">
+                        <span class="badge-overlay">Syarat</span>
+                        <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?q=80&w=500" alt="Islam">
+                    </div>
+                    <div class="card-content">
+                        <h5>Islam, Baligh & Berakal</h5>
+                        <p>Haji diwajibkan bagi Muslim yang dewasa secara hukum (baligh) dan memiliki kesadaran mental yang penuh.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="haji-card" onclick="openDetail('istitaah')">
+                    <div class="card-img-container">
+                        <span class="badge-overlay">Syarat</span>
+                        <img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?q=80&w=500" alt="Mampu">
+                    </div>
+                    <div class="card-content">
+                        <h5>Istita'ah (Mampu)</h5>
+                        <p>Meliputi kecukupan harta untuk perjalanan, biaya keluarga, serta kesehatan fisik yang memadai.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">II. Rukun Haji</h2>
+        <p class="section-subtitle">Rangkaian inti ibadah yang jika ditinggalkan maka haji TIDAK SAH.</p>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="haji-card" onclick="openDetail('wukuf')">
+                    <div class="card-img-container">
+                        <span class="badge-overlay">Rukun</span>
+                        <img src="https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?q=80&w=500" alt="Wukuf">
+                    </div>
+                    <div class="card-content">
+                        <h5>Wukuf di Arafah</h5>
+                        <p>Berdiam diri di padang Arafah pada tanggal 9 Dzulhijjah sebagai puncak ibadah haji.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="haji-card" onclick="openDetail('thawaf')">
+                    <div class="card-img-container">
+                        <span class="badge-overlay">Rukun</span>
+                        <img src="https://images.unsplash.com/photo-1565711561500-47675fc44af0?q=80&w=500" alt="Thawaf">
+                    </div>
+                    <div class="card-content">
+                        <h5>Thawaf Ifadhah</h5>
+                        <p>Mengelilingi Ka'bah sebanyak 7 kali putaran dimulai dari Hajar Aswad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="haji-card" onclick="openDetail('sai')">
+                    <div class="card-img-container">
+                        <span class="badge-overlay">Rukun</span>
+                        <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?q=80&w=500" alt="Sai">
+                    </div>
+                    <div class="card-content">
+                        <h5>Sa'i (Shafa-Marwah)</h5>
+                        <p>Berjalan/berlari kecil antara bukit Shafa dan bukit Marwah sebanyak 7 kali putaran.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">III. Larangan & Tahallul</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="haji-card" onclick="openDetail('tahallul')">
+                    <div class="card-img-container">
+                        <span class="badge-overlay">Rukun Akhir</span>
+                        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=500" alt="Tahallul">
+                    </div>
+                    <div class="card-content">
+                        <h5>Tahallul</h5>
+                        <p>Melepaskan diri dari larangan ihram dengan cara mencukur atau memendekkan rambut kepala.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="larangan-box">
+                    <h4 class="fw-bold"><i class="fas fa-exclamation-triangle text-danger me-2"></i>Larangan Ihram</h4>
+                    <p class="text-muted">Selama dalam keadaan ihram, jamaah dilarang memotong kuku, memakai parfum, berburu hewan, serta larangan perilaku (Rafats, Fusuk, Jidal).</p>
+                    <div class="dalil-box">
+                        <small><strong>Dalil:</strong> QS. Al-Baqarah: 197 - "Tidak boleh rafats, berbuat fasik dan berbantah-bantahan dalam haji."</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="detailModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 15px;">
+                <div class="modal-header" style="background: #1e5631; color: white;">
+                    <h5 class="modal-title" id="mJudul">Detail Materi</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="fw-bold text-success" id="mHeader"></h4>
+                    <p id="mDesc"></p>
+                    <div class="dalil-box">
+                        <strong>Sumber Dalil:</strong><br>
+                        <span id="mDalil"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="mb-0 text-muted">&copy; 2026 Edukasi Manasik Haji Digital - Sesuai Tuntunan Syariat</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const hData = {
+            islam: {
+                judul: "Islam, Baligh & Berakal",
+                desc: "Syarat dasar bagi setiap Muslim dewasa. Haji hanya sah jika dilakukan oleh Muslim yang telah baligh (dewasa) dan sehat akalnya.",
+                dalil: "HR. Abu Dawud: 'Pena diangkat dari tiga golongan... anak kecil hingga baligh, dan orang gila hingga sembuh.'"
+            },
+            istitaah: {
+                judul: "Istita'ah (Kemampuan)",
+                desc: "Kemampuan finansial untuk perjalanan, biaya keluarga yang ditinggalkan, serta keamanan jalur perjalanan.",
+                dalil: "QS. Ali 'Imran: 97: '...mengerjakan haji adalah kewajiban manusia terhadap Allah, yaitu (bagi) orang yang sanggup...'"
+            },
+            wukuf: {
+                judul: "Wukuf di Arafah",
+                desc: "Hadir di padang Arafah pada 9 Dzulhijjah. Merupakan rukun terpenting yang menentukan sahnya haji.",
+                dalil: "Sabda Nabi SAW: 'Al-Hajju Arafah' (Haji itu adalah wukuf di Arafah). (HR. Tirmidzi)"
+            },
+            thawaf: {
+                judul: "Thawaf Ifadhah",
+                desc: "Mengelilingi Ka'bah 7 putaran. Harus dalam keadaan suci dari hadats besar maupun kecil.",
+                dalil: "QS. Al-Hajj: 29: '...dan hendaklah mereka melakukan thawaf sekeliling rumah yang tua itu (Baitullah).'"
+            },
+            sai: {
+                judul: "Sa'i",
+                desc: "Ibadah berjalan kaki mengenang perjuangan Siti Hajar mencari air. Dimulai dari bukit Shafa dan berakhir di Marwah.",
+                dalil: "QS. Al-Baqarah: 158: 'Sesungguhnya Shafa dan Marwah adalah sebagian dari syiar Allah...'"
+            },
+            tahallul: {
+                judul: "Tahallul",
+                desc: "Mencukur minimal 3 helai rambut. Bagi laki-laki disunnahkan gundul, bagi wanita cukup memotong sepanjang ujung jari.",
+                dalil: "QS. Al-Fath: 27: '...dengan mencukur rambut kepala dan mengguntingnya...'"
+            }
+        };
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const quizData = [
+            {
+                q: "Apa yang membedakan rukun Haji dengan rukun Umrah?",
+                options: ["Tawaf", "Wukuf di Arafah", "Sa'i", "Tahallul"],
+                ans: 1
+            },
+            {
+                q: "Manakah yang merupakan salah satu syarat wajib haji?",
+                options: ["Wukuf", "Istitha’ah (Mampu)", "Tawaf Wadak", "Mencukur Rambut"],
+                ans: 1
+            },
+            {
+                q: "Melakukan rukun haji sesuai urutan disebut...",
+                options: ["Ihram", "Tahallul", "Tertib", "Mabrur"],
+                ans: 2
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        const qText = document.getElementById('question-text');
+        const optCont = document.getElementById('options-container');
+        const nextBtn = document.getElementById('next-btn');
+        const quizBody = document.getElementById('quiz-body');
+        const resultCont = document.getElementById('result-container');
+        const scoreDisp = document.getElementById('score-display');
+
+        function loadQuestion() {
+            const current = quizData[currentQuestion];
+            qText.innerText = current.q;
+            optCont.innerHTML = '';
+            nextBtn.classList.add('d-none');
+
+            current.options.forEach((opt, i) => {
+                const btn = document.createElement('button');
+                btn.innerText = opt;
+                btn.className = "btn btn-outline-success text-start py-3 px-4 rounded-3";
+                btn.onclick = () => selectOption(i);
+                optCont.appendChild(btn);
+            });
+        }
+
+        function selectOption(idx) {
+            const correct = quizData[currentQuestion].ans;
+            if(idx === correct) score += 33.3; // Simple scoring
+            
+            // Disable all buttons and show next
+            const buttons = optCont.getElementsByTagName('button');
+            for(let b of buttons) b.disabled = true;
+            
+            buttons[idx].classList.replace('btn-outline-success', idx === correct ? 'btn-success' : 'btn-danger');
+            if(idx !== correct) buttons[correct].classList.replace('btn-outline-success', 'btn-success');
+            
+            nextBtn.classList.remove('d-none');
+        }
+
+        nextBtn.onclick = () => {
+            currentQuestion++;
+            if(currentQuestion < quizData.length) {
+                loadQuestion();
+            } else {
+                quizBody.classList.add('d-none');
+                resultCont.classList.remove('d-none');
+                scoreDisp.innerText = Math.round(score > 90 ? 100 : score);
+            }
+        };
+
+        loadQuestion();
+    </script>
+</body>
+</html>
